@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="app.webmanifest">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cats and dogs</h1>
+    <p>Click on your share icon and click 'add to homescreen' to download it on your apple device.</p>
+    <br>
+    <p>Click on the burger icon and click "add page to"/føj side til to add to your android device. Icons does not seem to work on Android.</p>
+        <!-- Asking the browser if it supports service worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            console.log("Serviceworker is available")
+            navigator.serviceWorker.register("/cat/serviceworker.js");
+        } else {
+            console.log("Serviceworker is NOT available")
+        }
+    </script>
+</body>
+</html>
